@@ -98,8 +98,6 @@ docker build -t user-management-service .
 docker run -d -p <host-port>:3000 user-management-service
 ```
 
-Replace `<host-port>` with the port number on your host machine where you want to access the microservice.
-
 Example:
 
 ```bash

@@ -13,9 +13,6 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Run migration script to insert initial data
-RUN npm run init_migrate
-
 # Expose the port on which the application will run
 EXPOSE 3000
 

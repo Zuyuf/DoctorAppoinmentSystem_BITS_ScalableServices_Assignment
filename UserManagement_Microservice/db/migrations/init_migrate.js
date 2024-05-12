@@ -36,11 +36,12 @@ async function insertInitialData() {
 }
 
 (
-    () => {
+    async () => {
         try {
-            createUsersTable();
-            insertInitialData();
+            await createUsersTable();
+            await insertInitialData();
             console.log('InsertInitialData SUCCESS :)')
+            return Promise.resolve(true);
         }
         catch (error) {
             console.error('InsertInitialData FAILED!!!!')
@@ -48,3 +49,4 @@ async function insertInitialData() {
     }
 )()
 
+return;
